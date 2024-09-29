@@ -3,7 +3,7 @@ FROM golang:1.22-bullseye AS builder
 RUN useradd -m builder
 WORKDIR /src
 
-ADD ./go.mod ./go.sum ./
+ADD ./go.mod ./
 RUN go mod download
 
 COPY . .

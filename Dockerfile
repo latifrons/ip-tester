@@ -16,7 +16,7 @@ RUN go build -a -o main .
 # Copy OG into basic alpine image
 FROM ubuntu:24.04
 
-RUN useradd -m exchange
+RUN useradd -m user
 
 WORKDIR /www
 COPY --from=builder --chown=exchange:exchange /src/main .

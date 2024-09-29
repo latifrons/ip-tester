@@ -19,7 +19,7 @@ FROM ubuntu:24.04
 RUN useradd -m user
 
 WORKDIR /www
-COPY --from=builder --chown=exchange:exchange /src/main .
+COPY --from=builder --chown=user:user /src/main .
 
 RUN chown -R user:user .
 
